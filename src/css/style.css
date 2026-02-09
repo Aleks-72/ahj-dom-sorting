@@ -1,0 +1,33 @@
+header {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border: 3px double black; 
+    border-collapse: collapse;
+}
+
+table th {
+    border: 2px solid black; 
+}
+
+table td {
+    padding: 2px 5px;
+    border: 1px solid black; 
+}
+
+.sort-icon::after {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.sorted-up::after {
+    content: '↑';
+}
+
+.sorted-down::after {
+    content: '↓';
+}
