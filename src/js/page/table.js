@@ -20,7 +20,7 @@ export default class Table {
             tableRow.dataset.title = film.title;
             tableRow.dataset.year = film.year;
             tableRow.dataset.imbd = film.imdb;
-            for (let attribute of [film.id, film.title, `(${film.year})`, `imdb: ${film.imdb}`]) {
+            for (let attribute of [film.id, film.title, `(${film.year})`, `imdb: ${film.imdb.toFixed(2)}`]) {
                 const tableData = document.createElement('td');
                 tableData.textContent = attribute;
                 tableRow.appendChild(tableData);
