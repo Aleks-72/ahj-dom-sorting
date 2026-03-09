@@ -1,7 +1,7 @@
 export default class Table {
     constructor(element) {
         const table = document.createElement("table");
-        element.appendChild(table);
+        element.append(table);
         this._element = table;
     };
 
@@ -11,21 +11,21 @@ export default class Table {
             const tableHeader = document.createElement('th');
             tableHeader.classList.add('sort-icon');
             tableHeader.textContent = header;
-            tableHeaders.appendChild(tableHeader);
+            tableHeaders.append(tableHeader);
         };
-        this._element.appendChild(tableHeaders);
+        this._element.append(tableHeaders);
         for (let film of filmsList) {
             const tableRow = document.createElement('tr');
             tableRow.dataset.id = film.id;
             tableRow.dataset.title = film.title;
             tableRow.dataset.year = film.year;
-            tableRow.dataset.imbd = film.imdb;
+            tableRow.dataset.imdb = film.imdb;
             for (let attribute of [film.id, film.title, `(${film.year})`, `imdb: ${film.imdb.toFixed(2)}`]) {
                 const tableData = document.createElement('td');
                 tableData.textContent = attribute;
-                tableRow.appendChild(tableData);
+                tableRow.append(tableData);
             };
-            this._element.appendChild(tableRow);
+            this._element.append(tableRow);
         }
     }
 

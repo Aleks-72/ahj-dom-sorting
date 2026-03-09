@@ -7,7 +7,7 @@ export default class Header {
         const header = document.createElement("header");
         const headerName = document.createElement("h1");
         headerName.textContent = "Table with sorts";
-        header.appendChild(headerName);
-        this._elements.appendChild(header)
+        header.append(headerName);
+        this._elements.append(header)
     }
 }
